@@ -37,7 +37,7 @@ class DxfArc extends DxfEntity{
 	*/
 	function __toString(){
 		// TODO all are string values, maybee som should be decimal
-		return sprintf("0\nARC\n%s\n%s40\n%f\n50\n%f\n51\n%f\n",
+		return sprintf("0\nARC\n%s\n%s40\n%f\n50\n%f\n51\n%f",
 									$this->common(),
 									point($this->attributes['center']),
 									$this->attributes['radius'],

@@ -53,7 +53,7 @@ class DxfInsert extends DxfEntity{
 		if (isset($this->attributes['cols'])){
 			$result .= sprintf("70\n%s\n", $this->attributes['cols']);
 		}
-		if (isset($this->attributes['rotation'])){
+		if (isset($this->attributes['colspacing'])){
 			$result .= sprintf("44\n%s\n", $this->attributes['colspacing']);
 		}
 		if (isset($this->attributes['rows'])){

@@ -77,8 +77,8 @@ class DxfWriter extends DxfCollection{
 	* Tables like ltype,layer,style,...
 	*/
 	function table($name, $x = null){
-		$xstr = isset($x) ? implode($this->stringArray($x),"\n") : '';
-		return sprintf("0\nTABLE\n2\n%s\n70\n%d\n%s\n0\nENDTAB\n", strtoupper($name), count($x), $xstr);
+		$xstr = isset($x) ? implode($this->stringArray($x),"\n") . (count($x)>0?"\n":'') : '';
+		return sprintf("0\nTABLE\n2\n%s\n70\n%d\n%s0\nENDTAB\n", strtoupper($name), count($x), $xstr);
 	}
 	
 	function appendBlock($block){

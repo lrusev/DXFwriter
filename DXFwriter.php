@@ -70,7 +70,7 @@ class DxfWriter extends DxfCollection{
 	*/
 	function section($name, $x = null){
 		$xstr = is_array($x) && count($x) ? implode($this->stringArray($x)) : '';
-		return sprintf("0\nSECTION\n2\n%s\n%s0\nENDSEC", strtoupper($name), $xstr);
+		return sprintf("0\nSECTION\n2\n%s\n%s\n0\nENDSEC", strtoupper($name), trim($xstr));
 	}
 
 	/*
